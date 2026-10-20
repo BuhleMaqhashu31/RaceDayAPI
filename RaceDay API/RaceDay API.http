@@ -1,0 +1,45 @@
+@RaceDay_API_HostAddress = https://localhost:7087
+
+### 1. Register a new Organiser
+POST {{RaceDay_API_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "fullName": "John Organiser",
+  "email": "organiser@raceday.com",
+  "password": "Password123",
+  "roleId": 1
+}
+
+###
+
+### 2. Login as Organiser
+POST {{RaceDay_API_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "email": "organiser@raceday.com",
+  "password": "Password123"
+}
+
+###
+
+### 3. View All Events
+GET {{RaceDay_API_HostAddress}}/api/Events
+Accept: application/json
+
+###
+
+### 4. Create a New Event (Requires Organiser role session)
+POST {{RaceDay_API_HostAddress}}/api/Events
+Content-Type: application/json
+
+{
+  "title": "Soweto Autumn Run",
+  "Description": "Annual 10k road running event",
+  "EventDate": "2026-11-01",
+  "Location": "Soweto, Johannesburg",
+  "OrganiserId": 1
+}
+
+###
