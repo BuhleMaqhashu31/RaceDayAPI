@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Create Event";
+}
+
+<h2>Create New Event</h2>
+
+<form asp-action="CreateEvent" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label>Event Name</label>
+        <input name="Name" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Date</label>
+        <input name="Date" type="date" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Location</label>
+        <input name="Location" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Event Banner Image</label>
+        <input name="BannerFile" type="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Save Event</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

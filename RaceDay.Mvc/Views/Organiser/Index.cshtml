@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Organiser Dashboard";
+}
+
+<h2>Organiser Dashboard</h2>
+
+<p>
+    <a asp-action="CreateEvent" class="btn btn-primary">Create New Event</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data passed from controller will loop here -->
+        <tr>
+            <td colspan="4" class="text-muted text-center">No events found or loading...</td>
+        </tr>
+    </tbody>
+</table>
